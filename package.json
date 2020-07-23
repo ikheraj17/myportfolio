@@ -2,6 +2,7 @@
     "title": "Freelancer",
     "name": "startbootstrap-freelancer",
     "version": "6.0.4",
+    "homepage": "https://ikheraj17.github.io/myportfolio/",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -10,7 +11,9 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "deploy": "gh-pages -d dist",
+        "predeploy": "npm run build"
     },
     "description": "A freelancer portfolio HTML theme for Bootstrap.",
     "keywords": [
@@ -23,7 +26,6 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/themes/freelancer",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-freelancer/issues",
         "email": "feedback@startbootstrap.com"
@@ -38,7 +40,8 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-freelancer.git"
     },
     "dependencies": {
-        "bootstrap": "4.5.0"
+        "bootstrap": "4.5.0",
+        "gh-pages": "^3.1.0"
     },
     "devDependencies": {
         "autoprefixer": "9.8.0",
